@@ -85,6 +85,21 @@
   .course-block ul li { padding:.18rem 0; }
   .course-block ul li::before { content:"›  "; color:var(--gold); }
 
+  /* RESEARCH ICON BAND */
+  .research-band { background: linear-gradient(180deg, #17293f 0%, var(--navy) 100%); padding: 1.8rem 2rem; border-bottom: 1px solid rgba(184,145,42,.3); }
+  .research-band-inner { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; align-items: center; justify-items: center; }
+  .research-band-img { width: 120px; height: 120px; object-fit: contain; transition: transform 0.3s ease; }
+  .research-band-img:hover { transform: scale(1.08); }
+
+  /* SERVICE */
+  .service-grid { display:grid; grid-template-columns:1fr; gap:1rem; }
+  .service-card { background:var(--section-bg); border-left:3px solid var(--gold); border-radius:0 4px 4px 0; padding:1rem 1.3rem; }
+  .service-card h3 { color:var(--gold); font-size:.85rem; text-transform:uppercase; letter-spacing:.08em; margin-bottom:.6rem; font-family:Arial,sans-serif; }
+  .service-card ul { list-style:none; font-size:.9rem; }
+  .service-card ul li { padding:.28rem 0; color:var(--text); }
+  .service-card ul li em { color:var(--navy); }
+  .service-card .service-date { color:var(--muted); font-size:.83rem; font-family:Arial,sans-serif; }
+
   /* CONTACT */
   .contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:1.5rem; }
   .contact-card { background:var(--section-bg); border:1px solid var(--border); border-radius:4px; padding:1.2rem 1.4rem; }
@@ -99,6 +114,8 @@
     .about-grid, .contact-grid { grid-template-columns:1fr; }
     .header-inner { flex-direction:column; align-items:center; text-align:center; }
     nav ul { justify-content:center; }
+    .research-band-inner { gap: 1rem; }
+    .research-band-img { width: 85px; height: 85px; }
   }
 </style>
 </head>
@@ -110,6 +127,7 @@
     <li><a href="#research">Research</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#service">Service</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -139,6 +157,14 @@
     <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=https://song-phd.github.io&bgcolor=1a2e4a&color=f0e6cc&qzone=1" alt="QR Code" class="qr-code" title="Scan to visit homepage"/>
   </div>
 </header>
+
+<div class="research-band">
+  <div class="research-band-inner">
+    <img src="image_betting.webp" alt="Sports Betting Research" class="research-band-img"/>
+    <img src="image_baseball.webp" alt="Baseball Analytics Research" class="research-band-img"/>
+    <img src="image_ai.webp" alt="AI in Sport Research" class="research-band-img"/>
+  </div>
+</div>
 
 <main>
 
@@ -204,9 +230,15 @@
     <div id="journal" class="tab-content active">
       <ul class="pub-list">
         <li class="pub-item">
-          <div class="pub-authors">Kim, M. J., Song, H., Jang, W. W., Choi, W., &amp; Byon, K. K. (Accepted)</div>
+          <div class="pub-authors">Kim K., Byon, K. K., &amp; Song, H. (Accepted)</div>
+          <div class="pub-title">Do Satisfaction and Service Quality Always Lead to Membership Renewal? The Moderating Roles of Switching Costs and Relationship Duration.</div>
+          <div class="pub-journal">International Journal of Sports Marketing and Sponsorship.</div>
+        </li>
+        <li class="pub-item">
+          <div class="pub-authors">Kim, M. J., Song, H., Jang, W. W., Choi, W., &amp; Byon, K. K. (2025)</div>
           <div class="pub-title">Bridging the Distance: Non-local College Sport Fans' Media Consumption Motivations.</div>
-          <div class="pub-journal">Asia Pacific Journal of Applied Sport Sciences.</div>
+          <div class="pub-journal">Asia Pacific Journal of Applied Sport Sciences, 6(3), 1–18.</div>
+          <a href="https://doi.org/10.46695/ASCS.6.3.1" target="_blank">DOI</a>
         </li>
         <li class="pub-item">
           <div class="pub-authors">Song, H., Kim, M. J., Choi, W., &amp; Jang, W. W. (2025)</div>
@@ -306,11 +338,6 @@
       <p style="font-size:.88rem; color:var(--muted); margin-bottom:1rem; font-style:italic;">Manuscripts Under Review</p>
       <ul class="pub-list">
         <li class="pub-item">
-          <div class="pub-title">Do Satisfaction and Service Quality Always Lead to Membership Renewal? The Moderating Roles of Switching Costs and Relationship Duration.</div>
-          <div class="pub-authors">Kim K., Byon, K. K., &amp; Song, H. (Under review).</div>
-          <div class="pub-journal">International Journal of Sports Marketing and Sponsorship.</div>
-        </li>
-        <li class="pub-item">
           <div class="pub-title">Parents at youth competitions: Service quality and event satisfaction in Taekwondo.</div>
           <div class="pub-authors">Ok, J. J., Byon, K. K., Song, H. S., &amp; Pedersen, P. M. (Under review).</div>
           <div class="pub-journal">Managing Sport and Leisure.</div>
@@ -319,8 +346,8 @@
       <p style="font-size:.88rem; color:var(--muted); margin:1.2rem 0 .6rem; font-style:italic;">Manuscripts In Progress</p>
       <ul class="pub-list">
         <li class="pub-item"><div class="pub-title">Mapping the Intellectual Structure of Sport Management: An AI-Driven Bibliometric Analysis of Research Trends</div></li>
-        <li class="pub-item"><div class="pub-title">Beyond Gradual Evolution: Developing a Systemic Volatility Index (SVI) to Detect Critical Spikes in MLB History</div></li>
-        <li class="pub-item"><div class="pub-title">The Dark Side of the Global Sport Supply Chain: Analyzing the Marketing Consequences of Asian Labor Exploitation</div></li>
+        <li class="pub-item"><div class="pub-title">Critical Spikes in MLB History Detected by a Systemic Volatility Index (SVI)</div></li>
+        <li class="pub-item"><div class="pub-title">Beyond the Marketing of Equality: Confronting Epistemological Racism in Sport Supply Chains through the Image of Factory Origin (IFO)</div></li>
         <li class="pub-item"><div class="pub-title">Statistical Significance or Selection Bias? Investigating the P-value Density Discontinuity in Sport Management Journals</div></li>
         <li class="pub-item"><div class="pub-title">A Cross-Cultural Study of Customer Responses in the U.S. and Taiwan: Post-Global Health Crisis Perspectives</div></li>
       </ul>
@@ -347,18 +374,30 @@
     <div style="margin-top:1.8rem;">
       <div class="course-block">
         <h3>Northern State University (Assistant Professor)</h3>
+        <div class="semester">Fall 2026</div>
+        <ul>
+          <li>PE-411/511: Sport Marketing (UG &amp; Grad)</li>
+          <li>PE-414/514: Law and Ethics (UG &amp; Grad)</li>
+          <li>PE-415/515: Esports Management (UG &amp; Grad)</li>
+          <li>PE-459: Introduction to Research Methods (UG)</li>
+        </ul>
+        <div class="semester">Summer 2026</div>
+        <ul>
+          <li>PE-459: Introduction to Research Methods (UG)</li>
+          <li>PE-467/567: Event Planning and Facility Management (UG &amp; Grad)</li>
+        </ul>
         <div class="semester">Spring 2026</div>
         <ul>
           <li>PE-412/512: Financial Aspects of Sports (UG &amp; Grad)</li>
           <li>PE-456/556: International Sport Management (UG &amp; Grad)</li>
           <li>PE-467/567: Event Planning and Facility Management (UG &amp; Grad)</li>
-          <li>PE-781: Sport Analytics (Graduate)</li>
+          <li>PE-781: Sport Analytics (Grad)</li>
         </ul>
         <div class="semester">Fall 2025</div>
         <ul>
           <li>PE-414/514: Law and Ethics (UG &amp; Grad)</li>
           <li>PE-415/515: Esports Management (UG &amp; Grad)</li>
-          <li>PE-459: Intro to Research Methods (Undergraduate)</li>
+          <li>PE-459: Introduction to Research Methods (UG)</li>
           <li>PE-467/567: Event Planning and Facility Management (UG &amp; Grad)</li>
         </ul>
       </div>
@@ -380,7 +419,7 @@
         </ul>
       </div>
       <div class="course-block">
-        <h3>Indiana University (Instructor of Record & Associate Instructor)</h3>
+        <h3>Indiana University (Instructor of Record &amp; Associate Instructor)</h3>
         <div class="semester">Selected Courses (2019–2021)</div>
         <ul>
           <li>M428: Strategic Management in Sport Industry</li>
@@ -392,14 +431,40 @@
     </div>
   </section>
 
- <!-- CONTACT -->
+  <!-- SERVICE -->
+  <section id="service">
+    <h2>Professional Service</h2>
+    <div class="service-grid">
+      <div class="service-card">
+        <h3>Editorial Board</h3>
+        <ul>
+          <li><em>Journal of Issues in Intercollegiate Athletics</em> <span class="service-date">(2026 – Present)</span></li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Early Career Reviewer Board</h3>
+        <ul>
+          <li><em>Sport, Business and Management: An International Journal</em> <span class="service-date">(Since 2025)</span></li>
+        </ul>
+      </div>
+      <div class="service-card">
+        <h3>Professional Memberships</h3>
+        <ul>
+          <li>North American Society for Sport Management (NASSM) <span class="service-date">(2018 – Present)</span></li>
+          <li>Sport Marketing Association (SMA) <span class="service-date">(2018 – Present)</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
     <div class="contact-grid">
       <div class="contact-card">
         <h3>Office</h3>
         <p>
-          Gerber 208<br>
+          Gerber Hall 208<br>
           Sports Administration Program<br>
           Sport Sciences Department<br>
           Millicent Atkins School of Education<br>
@@ -415,13 +480,13 @@
       </div>
     </div>
   </section>
- 
+
 </main>
- 
+
 <footer>
   &copy; 2026 HyunSeok Song · Northern State University · Aberdeen, SD
 </footer>
- 
+
 <script>
 function showTab(id) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
